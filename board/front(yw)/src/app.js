@@ -21,7 +21,7 @@ const wImage = document.getElementById("writing_image");
 const wRegistBtn = document.getElementById("regist_btn");
 
 /* 레이아웃 쿼리 */
-const layout =document.querySelector('.layout')
+const layout = document.querySelector('.layout')
 
 /* 변수 */
 // [현재 카테고리의 인덱스, 현재 게시글의 각 인덱스] =[각각 카운트]
@@ -33,9 +33,10 @@ let listId = JSON.parse(localStorage.getItem("data"))?.length ?? 0;
 /* 데이터베이스 */
 // 로컬에 이미 존재하는 데이터를 가져와서 database 변수에 할당
 // 만일 로컬에 데이터가 없다면 undefined 이므로 || 연산에 의해 [] 빈배열 할당
+
 // || 연산자는 좌측값이 falsy 로 인식되면 뒤에 값을 평가한다.
 const localData = JSON.parse(localStorage.getItem("data")) || [];
-const database = localData;
+const database = localData; // databse = []
 
 /* 데이터베이스에 데이터를 전송하는 함수 */
 function storePushFunc() {
@@ -125,7 +126,6 @@ const writing = () => {
 };
 
 /* 글수정 페이지 */
-
 const update = () => {
   updatePage.style.cssText = `visibility:visible; opacity:1`;
   writingPage.style.cssText = `visibility:hidden; opacity:0`;
@@ -256,18 +256,19 @@ document.querySelector(".home_logo").addEventListener("click", () => {
   home()
   menuFocus(0)
 })
-document.querySelector(".login_icon").addEventListener('click',(e)=>{
+document.querySelector(".login_icon").addEventListener('click', (e) => {
   document.querySelector('.login_form').classList.toggle('login_on')
   layout.classList.toggle('layout_on')
 })
 
-document.querySelector('.layout').addEventListener('click',()=>{
+document.querySelector('.layout').addEventListener('click', () => {
   document.querySelector('.login_form').classList.toggle('login_on')
   layout.classList.toggle('layout_on')
 })
 
 render();
 
+/* 데이터베이스 업데이트 */
 function reload() {
   const json = JSON.stringify(database);
   console.log(listId);
@@ -275,10 +276,6 @@ function reload() {
   render(database)
 }
 // })()
-
-
-
-
 
 const reader = new FileReader();
 // console.log(reader.readAsText(wImage.file[0]))
