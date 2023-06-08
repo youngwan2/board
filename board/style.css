@@ -19,5 +19,45 @@
     margin-left: 18px;
 }
 input{
-    margin-left: 20px;
+  margin: 10px;
 }
+.table{
+    display: flex;
+}
+.table_1{
+    margin-left: 10px;
+    width: 13%;
+    color: white;
+    background-color: #777;
+    text-align: center;
+}
+.table_2{
+    margin-left: 10px;
+    width: 13%;
+    color: white;
+    background-color: #777;
+    text-align: center;
+}
+.table_3{
+    margin-left: 10px;
+    width: 13%;
+    color: white;
+    background-color: #777;
+    text-align: center;
+}
+.table_4{
+    margin-left: 10px;
+    width: 13%;
+    color: white;
+    background-color: #777;
+    text-align: center;
+}
+.table_5{
+    margin-left: 10px;
+    margin-right:10px;
+    width: 50%;
+    color: white;
+    background-color: #777;
+    text-align: center;
+}
+
