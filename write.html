@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>홈화면</title>
+    <link rel="stylesheet" href="/테스트/css/style4.css" />
+    <script src="/테스트/js/script3.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div id="home">
+        <img src="/img/Home.png" alt="홈" /><a href="/테스트/main.html"
+          >홈화면</a
+        >
+      </div>
+      <div id="borad">
+        <img src="/img/World.png" alt="게시판" /><a href="/테스트/board.html"
+          >게시판</a
+        >
+      </div>
+      <div id="write">
+        <img src="/img/Text-edit-filled.png" alt="글쓰기" /><a href="#"
+          >글쓰기</a
+        >
+      </div>
+    </div>
+    <div class="container">
+      <h1>
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/526/526127.png"
+          alt="글쓰기"
+          style="width: 50px; height: 50px"
+        />
+        글작성
+      </h1>
+      <hr />
+      <form action="">
+        <label for="title">제목</label>
+        <input
+          type="text"
+          placeholder="제목을 입력하세요."
+          id="title"
+          autocomplete="off"
+        /><br />
+        <label for="content">내용</label>
+        <input
+          type="text"
+          placeholder="내용을 입력하세요."
+          id="content"
+          autocomplete="off"
+        /><br />
+        <label for="name">작성자</label>
+        <input
+          type="text"
+          placeholder="닉네임을 입력해주세요."
+          id="name"
+          autocomplete="off"
+        /><br />
+        <span>이미지</span>
+        <input type="file" id="image" autocomplete="off" />
+        <div class="footer">
+          <button type="button" id="commit">등록</button>
+          <button type="reset" id="del">삭제</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
