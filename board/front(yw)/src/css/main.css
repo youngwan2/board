@@ -1,0 +1,49 @@
+
+.home_banner_con{
+    transition: 1s;
+}
+
+
+
+.home .home_banner{
+
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.home .home_message{
+
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2rem;
+    color:white;
+    text-align: center;
+}
+
+.home_banner_btn{
+    z-index: 100;
+    color:white;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: black;
+    padding: 5px;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.home_banner_btn:hover{
+    background-color: goldenrod;
+    cursor: pointer;
+}
+
+#prev{
+    left:2.5rem;
+}
+#next{
+    right: 2.5rem;
+}
