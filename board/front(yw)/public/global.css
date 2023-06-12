@@ -1,0 +1,164 @@
+/* 폰트, */
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@100;300;400;700&display=swap');
+
+
+
+
+
+
+
+* {
+    margin:0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color:white;
+}
+
+li{
+    list-style: none;
+}
+
+
+section{
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 110vh !important;
+    overflow: hidden auto;
+    animation: appear 1s ease-in-out;
+}
+
+@keyframes appear {
+    from {opacity: 0; transform: translate(-50px);}
+    
+}
+
+button{
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: burlywood !important;
+}
+
+#header{
+    animation: none;
+    background-color:rgba(20, 21, 21, 0.81);
+    box-shadow: 1px -7px 8px 2px rgba(0, 0, 0, 0.408);
+    height: 55px;
+    z-index: 100;
+    min-width: 100%;
+      bottom: 0;
+    width: 15%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu>ul{
+    display: flex;
+}
+
+#menu li:hover{
+    background-color: black;
+
+}
+
+#menu li:hover :is(a,i){
+    color:gold
+}
+
+#menu > ul>li>a{
+    margin:9px 15px;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu > ul>li>i{
+    padding: 3px;
+    color:white;
+}
+
+
+
+
+/* 각 섹션 타이틀 */
+.title{
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.779);
+    color:white;
+    box-shadow: 2px 5px 5px gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #main{
+    scroll-behavior:smooth;
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid black;
+    scroll-snap-type: y mandatory;
+    overflow:hidden auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#main> .section{
+    scroll-snap-align: start;
+    padding:15px;
+    min-width: 100%;
+    min-height: 100%;
+    transition: 1s;
+    border: 1px solid rebeccapurple;
+} */
+
+/* 
+ .scroll-box {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    margin: 10px;
+}
+
+.scroll-box.vertical {
+    flex-direction: column;
+    overflow: hidden auto;
+    scroll-snap-type: y mandatory;
+}
+.item {
+    scroll-snap-align: start;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 50pt;
+}
+.scroll-box::-webkit-scrollbar {background-color:#fff; height:4px; width: 4px;}
+.scroll-box::-webkit-scrollbar-track {background-color:#fff}
+.scroll-box::-webkit-scrollbar-thumb {background-color:#babac0; border-radius:4px}
+ */
+
+
+
+ /* 스크롤바 */
