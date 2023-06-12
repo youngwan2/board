@@ -6,6 +6,10 @@
 - 사용된 기술 스텍: js,html/css
 - 임시 호스팅 주소: https://youngwan2.github.io/board/sideBoard/front/src/index.html#home
 
+## 팀원(깃허브)
+- Kimjw111(https://github.com/Kimjw111)
+- jaeheech(https://github.com/jaeheech)
+
 ## 기능
 - 사용자는 게시판을 이용하여 간단한 게시글을 작성할 수 있다.
 - 사용자는 이미지를 첨부할 수 있고, 상세 페이지에서 해당 이미지를 확인할 수 있다.
@@ -22,10 +26,6 @@
 
 ## 비고 및 현황
 - 현재진행중(완료 예정일 :13일 오후 5시 경 예상)
-
-## 팀원(깃허브)
-- Kimjw111(https://github.com/Kimjw111)
-- jaeheech(https://github.com/jaeheech)
 
 ## 개선사항 
 - 6/12 : 반응형 레이아웃 적용 및 부자연스러운 UI 개선
