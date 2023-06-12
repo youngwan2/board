@@ -32,9 +32,9 @@ body{
   z-index: -1;
 }
 
-/* 홈 화면 중간에 보이는 이미지 */
+/* 홈 화면 중간에 보이는 메시지 */
 .home .home_banner_boundary> .home_message {
-    height: 60px;
+  transition: 1s;
     z-index: 1000;
     border-radius: 5px;
     position: fixed;
@@ -46,6 +46,11 @@ body{
     text-align: center;
     margin: 0 auto;
     min-width: 100%;
+    animation: apper 1s 1 forwards;
+}
+
+@keyframes appear {
+    from {opacity: 0;}
 }
 
 /* 홈 화면 중간 텍스트에 보면 보이는 노란색 마크 */

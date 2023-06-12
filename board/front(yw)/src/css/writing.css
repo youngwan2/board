@@ -1,0 +1,51 @@
+.writing_page {
+  min-height: 100%;
+  min-width: 80%;
+}
+
+form {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.writing_page label {
+  display: inline-block;
+  min-width: 60px;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.writing_page input {
+  border: none;
+  border-bottom: 2px solid black;
+  padding: 10px;
+  max-width: 1600px;
+  width: 95%;
+}
+
+#writing_content_label {
+  top: -13.5rem;
+  vertical-align: top;
+}
+
+#writing_content {
+  margin: 5px 0;
+  resize: none;
+  min-width: 200px;
+  width: 95%;
+  min-height: 400px;
+  max-width: 1600px;
+}
+
+.writing_btn_con {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.writing_btn_con > button {
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 5px;
+}

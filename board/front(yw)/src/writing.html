@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>글쓰기</title>
     <link rel="stylesheet" href="../public/global.css" />
+    <link rel="stylesheet" href="./css/writing.css">
     <script
       src="https://kit.fontawesome.com/80da291c3f.js"
       crossorigin="anonymous"
@@ -22,8 +23,7 @@
           </li>
           <li data-id="2">
             <a href="./board.html"
-              ><i class="fa-solid fa-clipboard"></i>Board</a
-            >
+              ><i class="fa-solid fa-clipboard"></i>Board</a>
           </li>
           <li data-id="3">
             <a href="./writing.html"
@@ -33,9 +33,25 @@
         </ul>
       </nav>
     </header>
-    <section>
-
+    <section class="writing_page" style="border: 1px solid black">
+      <h1 class="title">글쓰기</h1>
+      <form>
+         <label for="text_title">제목</label><br>
+         <input type="text" id="text_title" placeholder="제목을 입력하세요."></input><br>
+         <label for ="writing_content" id="writing_content_label">내용</label><br>
+         <textarea id="writing_content" placeholder="내용을 입력하세요".></textarea><br>
+         <label for="writing_writer">작성자</label><br>
+         <input id="writing_writer" ></input><br>
+         <label for="writing_image">이미지</label><br>
+         <input type="file" id="writing_image">
+         
+         <div class="writing_btn_con">
+            <button type="button" id="regist_btn">등록</button>
+            <button type="button" class="move_btn">목록</button>
+         </div>
+      </form>
     </section>
+
 
     <script src="./board.js"></script>
     <script src="./writing.js"></script>
