@@ -4,6 +4,7 @@
 - localStorage 를 데이터베이스 역할을 대신하여 게시판 기능을 구현한 프로젝트
 - 사용된 라이브러리 : typed.js
 - 사용된 기술 스텍: js,html/css
+- 임시 호스팅 주소: https://youngwan2.github.io/board/sideBoard/front/src/index.html#home
 
 ## 기능
 - 사용자는 게시판을 이용하여 간단한 게시글을 작성할 수 있다.
