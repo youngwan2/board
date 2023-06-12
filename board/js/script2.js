@@ -14,12 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
         boardList.setAttribute('class', 'boardList')
         boardList.setAttribute('id', 'boardList' + i)
         title.setAttribute('class', 'title')
+        ct.setAttribute('id','ct')
         count.innerHTML = a + i
         title.innerHTML = arr1[i].제목
         name.innerHTML = arr1[i].작성자
         date.innerHTML = arr1[i].작성일자
+        ct.innerHTML=arr1[i].조회수
         content.appendChild(boardList)
         boardList.append(count, title, name, ct, date)
-    }
+ }
 
 })
