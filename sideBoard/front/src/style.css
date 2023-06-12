@@ -24,23 +24,28 @@ body {
   background-size: cover;
 }
 
-#section::-webkit-scrollbar {
-  width: 10px;
+
+section{
+  overflow-x: auto;
 }
 
-#section::-webkit-scrollbar {
+
+section::-webkit-scrollbar {
   background-color: #00000016;
+  width: 2px;
 }
 
-#section::-webkit-scrollbar-thumb {
+section::-webkit-scrollbar-thumb {
   border-radius: 20px;
+  width: 1px;
   background-color: rgba(84, 219, 118, 0.709);
 }
 
 :is(input, textarea):focus {
-  outline-color: green;
   border: none !important;
+  background-color: gainsboro !important;
   padding: 5px;
+  outline: none !important;
 }
 
 button {
@@ -49,7 +54,8 @@ button {
 }
 
 button:hover {
-  background-color: rgb(9, 180, 9) !important;
+  background-color: rgba(68, 68, 68, 0.645) !important;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -69,12 +75,11 @@ textarea:focus {
   border-bottom: 1px solid gray !important;
   width: 90% !important;
   margin: 1rem 0;
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 1px 1px rgb(180, 179, 179);
 }
 
-input:focus {
-  outline: none !important;
-  background-color: rgb(224, 245, 192);
-}
+
 :is(input, textarea)::placeholder {
   color: black;
 }
@@ -85,7 +90,7 @@ input:focus {
   align-items: center;
   position: fixed;
   top: 0;
-  z-index: 106;
+  z-index: 33;
   width: 100%;
   height: 40px;
   background: rgba(255, 255, 255, 0.571);
@@ -179,7 +184,7 @@ input:focus {
   transition: 1s;
   visibility: hidden;
   opacity: 0;
-  /* z-index: 10000; */
+  z-index: 10000;
   box-shadow: 2px 2px 5px black;
   border-radius: 5px;
   position: fixed;
@@ -282,22 +287,31 @@ input:focus {
 }
 
 .home_background {
-  margin-top: 6rem;
+  position: relative;
+  margin-top: 2rem;
   width: 100%;
   transition: 1s;
-  box-shadow: inset 0 0 5px 3px black, inset 0 0 0 0 black;
-  height: 80vh;
-  background-color: greenyellow;
-  background-image: url("../public/images/forest.jpg");
+  height: 100%;
+  background-image: url("../public/images/intro.png");
   background-position: center;
-  background-size: cover;
-  animation: sizeUp 1s 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: sizeUp 1s infinite alternate ease-in-out;
+}
+
+#intro{
+  position: absolute;
+  text-align: center;
+  line-height: 2;
+  font-size: 1.05em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 @keyframes sizeUp {
-  from {
-    background-position: 50% 40%;
-  }
+  from { transform: translateY(-10px);}
+   
 }
 
 /* =============게시판 */
@@ -329,15 +343,19 @@ input:focus {
 .list_page tr {
   transition: 1s;
 }
+
+.list_page tr:nth-of-type(1){
+  pointer-events: none;
+}
 .list_page tr:hover {
-  box-shadow: inset 100vw 0 0 0 rgba(240, 240, 240, 0.709);
+  box-shadow: inset 100vw 0 0 0 rgba(240, 240, 240, 0.384);
 }
 
 .list_page #list_table th {
   color: white;
   padding: 5px;
   font-size: 13px;
-  background-color: rgba(0, 0, 0, 0.928);
+  background-color: rgba(0, 0, 0, 0.627);
 }
 
 .list_page > button {
@@ -359,7 +377,7 @@ input:focus {
   opacity: 0;
   width: 90%;
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
   text-align: center;
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(176, 170, 170);
@@ -378,7 +396,7 @@ input:focus {
 
 #list_modal th {
   padding: 5px;
-  background-color: rgb(34, 193, 34);
+  background-color: rgba(12, 150, 12, 0.581);
   color: white;
 }
 
@@ -527,13 +545,13 @@ input:focus {
 .update_btn_area {
   text-align: center;
   box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.465);
-  position: sticky;
+  position: sticky;;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.533);
   width: 100px;
-  margin: 0 auto;
+  margin: 2rem auto;
   padding: 10px;
-  bottom: 30px;
+  bottom:10px;
 }
 .update_btn_area > button {
   position: sticky;
@@ -548,17 +566,18 @@ input:focus {
   position: relative;
   transition: 1s;
   background-color: rgb(255, 255, 255);
-
-  width: 100%;
-  /* box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.408); */
+  padding: 10px;
+  width: 50%;
+  box-shadow: inset 1px 1px 5px 1px rgba(0, 0, 0, 0.408);
 }
 
 .detail_page h1 {
-  margin-top: 5rem;
+  margin-top: 3rem;
+  text-align: center;
 }
 
 .detail_page :is(p, figure) {
-  margin: 5px;
+  margin: 5px 0;
 }
 
 .detail_content_area {
@@ -574,7 +593,7 @@ input:focus {
 .detail_page > div > p {
   border-bottom: 1px solid rgba(0, 0, 0, 0.233);
   padding: 5px;
-  width: 100%;
+  width: 90%;
 }
 
 .detail_page > div > p > span {
@@ -660,6 +679,7 @@ tr td {
 
 @media screen and (max-width: 520px) {
   #search_btn {
+    margin-top: 1rem !important;
     right: 50px;
   }
 }
@@ -679,8 +699,8 @@ tr td {
     opacity: 0;
     position: fixed;
     z-index: 105;
-    height: 180px;
-    top: 3.8rem;
+    height: 135px;
+    top: 2.6rem;
     background-color: rgba(0, 0, 0, 0.771);
   }
 
@@ -710,7 +730,7 @@ tr td {
   }
 
   #header > nav > ul > li > a.menu_on::before {
-    width: 12%;
+    width: 10%;
   }
 
   #header > nav > ul > li:hover {

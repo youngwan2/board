@@ -39,7 +39,7 @@ function storePushFunc() {
   database.push(data);
   reload();
 
-  [wUserInput.value, wContent.value, wWriter.value] = ["", "", ""];
+  [wUserInput.value, wContent.value, wWriter.value,wImage.value] = ["", "", "",""];
 }
 
 /* 로그인 상태 관리 */
@@ -55,7 +55,9 @@ const state = (() => {
 function menuFocus(categoryIndex) {
   categoriesLi.forEach((_, i) => {
     categoriesLi[i].classList.remove("menu_on");
-    if (i === categoryIndex) {categoriesLi[i].classList.add("menu_on")};
+    if (i === categoryIndex) {
+      categoriesLi[i].classList.add("menu_on");
+    }
   });
 }
 menuFocus(categoryIndex);
@@ -94,20 +96,23 @@ const pageChange = (category) => {
 
 /* 홈 페이지 */
 const home = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  location.href='#home'
 };
 home();
 
 /* 게시판 페이지 */
 const board = () => {
-  window.scrollTo({ top: section[1].offsetTop - 40, behavior: "smooth" });
+  location.href='#board'
 };
 
+/* 권한이 없는 유저에 대한 접근을 통제하는 함수 */
 function accessControl() {
   // 유저의 로그인 데이터가 존재하지 않는다면 로그인하라는 문구와 동시에 로그인 모달창이 뜨며, 홈으로 이동
   const isLogin = JSON.parse(sessionStorage.getItem("user"))?.isLogin || false;
   if (!isLogin) {
+    location.href="#home"
     alert("로그인 하세요");
+    
     homeShift();
     return loginToggle();
   }
@@ -115,13 +120,13 @@ function accessControl() {
 
 /* 글쓰기 페이지 */
 const writing = () => {
-  window.scrollTo({ top: section[2].offsetTop - 30, behavior: "smooth" });
+  location.href="#writing"
   accessControl(); // 접근 권한를 통제하는 함수(가짜 미들웨어 역할)
 };
 
 /* 글수정 페이지 */
 const update = () => {
-  window.scrollTo({ top: section[4].offsetTop - 30, behavior: "smooth" });
+  location.href="#update"
   accessControl(); // 접근 권한를 통제하는 함수(가짜 미들웨어 역할)
 };
 
@@ -382,7 +387,6 @@ function search(searchValue, database) {
       filteredList.push(database[i]);
     }
   }
-
   filterListModal(filteredList);
 }
 

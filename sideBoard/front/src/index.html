@@ -25,7 +25,9 @@
     </header>
     <main id="main" class="container">
       <section id="home"  class="home_page page_con">
-        <div class="home_background"></div>
+        <div class="home_background">
+          <p id="intro"></p>
+        </div>
       </section>
 
       <section id="board" class="list_page page_con">
@@ -103,7 +105,7 @@
       <section id="update" class="update_page page_con">
         <h1 class="title">글수정</h1>
         <label for="update_input">제목</label><br>
-        <input type="text" id="update_input" placeholder="수정할 제목 입력하쇼"><br><br>
+        <input type="text" id="update_input" placeholder="수정할 제목 입력하쇼"><br>
         <label for="update_content">내용</label><br>
         <textarea id="update_content" placeholder="수정할 내용을 입력하쇼"></textarea>
         
@@ -133,6 +135,8 @@
     </div>
   </form>
     <div class="layout"></div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="./typed.js"></script>
     <script src="./query.js"></script>
     <script src="./app.js"></script>
     <script src="./event.js"></script>
