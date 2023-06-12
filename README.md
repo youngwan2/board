@@ -1,5 +1,8 @@
-# 게시판 만들기(팀 프로젝트)
+# JS 로컬 스토리지 베이스 게시판 만들기(팀 프로젝트)
 
+## 개요
+- localStorage 를 데이터베이스 역할을 대신하여 게시판 기능을 구현한 프로젝트
+- 사용된 라이브러리 : typed.js
 
 ## 기능
 - 사용자는 게시판을 이용하여 간단한 게시글을 작성할 수 있다.
@@ -13,12 +16,10 @@
 - 6/13 : 예정 (기능 추가 및 merge 후 최종 결과물 도출)
 
 ## 프리뷰
--![preview](https://github.com/youngwan2/board/assets/107159871/ef457347-0d2f-47c8-bce0-db2067807493)
-
+![preview](https://github.com/youngwan2/board/assets/107159871/ef457347-0d2f-47c8-bce0-db2067807493)
 
 ## 비고 및 현황
 - 개발중(완료 예정일 : 6/12 오후 5:50, 늦으면 13일 오후 5시 경 예상)
-
 
 ## 팀원(깃허브)
 - Kimjw111(https://github.com/Kimjw111)
