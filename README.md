@@ -1,7 +1,7 @@
 # JS 로컬 스토리지 베이스 게시판 만들기(팀 프로젝트)
 
 ## 개요
-- localStorage 를 데이터베이스 역할을 대신하여 게시판 기능을 구현한 프로젝트
+- localStorage 를 데이터베이스 역할로 대신하여 게시판 기능을 구현해 보는 프로젝트
 - 사용된 라이브러리 : typed.js
 - 사용된 기술 스텍: js,html/css
 - 임시 호스팅 주소: https://youngwan2.github.io/board/sideBoard/front/src/index.html#home
