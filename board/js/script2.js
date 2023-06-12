@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         content.appendChild(boardList)
         boardList.append(count, title, name, ct, date)
         board[i].addEventListener('click',()=>{
-          boardList[i].ct.innerHTML=a++   
+          ct.innerHTML=a++   
         })
         }
 })
