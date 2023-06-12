@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const ct = document.createElement('div')
         const date = document.createElement('div')
         boardList.setAttribute('class', 'boardList')
+        let board =document.getElementsByClassName('boardList')
         title.setAttribute('class', 'title')
         ct.setAttribute('id','ct')
         count.innerHTML = a + i
@@ -21,8 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
         ct.innerHTML=arr1[i].조회수
         content.appendChild(boardList)
         boardList.append(count, title, name, ct, date)
-        boardList.addEventListener('click',()=>{
-          ct.innerHTML=a++   
+        board[i].addEventListener('click',()=>{
+          boardList[i].ct.innerHTML=a++   
         })
         }
 })
