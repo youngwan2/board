@@ -20,7 +20,7 @@
 ![preview](https://github.com/youngwan2/board/assets/107159871/ef457347-0d2f-47c8-bce0-db2067807493)
 
 ## 비고 및 현황
-- 개발중(완료 예정일 : 6/12 오후 5:50, 늦으면 13일 오후 5시 경 예상)
+- 현재진행중(완료 예정일 :13일 오후 5시 경 예상)
 
 ## 팀원(깃허브)
 - Kimjw111(https://github.com/Kimjw111)
